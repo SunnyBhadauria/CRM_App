@@ -1,0 +1,18 @@
+{
+  "Stores": [
+    {
+      "storeId": 12,
+      "storeName": "Peter England",
+      "storeCountry": "Uk",
+      "storePinCode": 232,
+      "id": 2
+    },
+    {
+      "storeId": 0,
+      "storeName": "",
+      "storeCountry": "",
+      "storePinCode": 0,
+      "id": 3
+    }
+  ]
+}

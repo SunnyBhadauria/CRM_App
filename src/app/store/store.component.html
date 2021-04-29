@@ -1,0 +1,127 @@
+<div class="row">
+    <div class="col-md-4 col-md-offset-4" style="margin-top: 50px; border: 1px solid rgb(100, 98, 98); padding: 30px;">
+      <form class="form-horizontal" role="form" name="form"  #f="ngForm" novalidate>
+        <fieldset>
+          <legend>store Details:
+            <strong>Template Driven Form</strong>
+          </legend>
+ 
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="textinput">Registration Form</label>
+            <div class="col-sm-10">
+              <input type="number" name="storeId" placeholder="Enter storeId No" class="form-control" [(ngModel)]="model.storeId" #storeId="ngModel" [ngClass]="{ 'is-invalid': f.submitted && storeId.invalid }" required />
+           
+              <div *ngIf="f.submitted && storeId.invalid" class="invalid-feedback">
+                <div *ngIf="storeId.errors.required" >CustomerId is required</div>
+               </div> 
+           
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="textinput">storeName</label>
+            <div class="col-sm-10">
+              <input type="text" name="storeName" placeholder="Enter storeName" class="form-control" [(ngModel)]="model.storeName" #storeName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && storeName.invalid }" required />
+              <div *ngIf="f.submitted && storeName.invalid" class="invalid-feedback">
+                <div *ngIf="storeName.errors.required" >CustomerId is required</div>
+               </div> 
+           
+           
+            </div>
+          </div>
+ 
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="textinput">storeCountry</label>
+            <div class="col-sm-10">
+              <input type="text" name="storeCountry" placeholder="Enter storeCountry" class="form-control" [(ngModel)]="model.storeCountry" #storeCountry="ngModel" [ngClass]="{ 'is-invalid': f.submitted && storeCountry.invalid }" required />
+          
+              <div *ngIf="f.submitted && storeCountry.invalid" class="invalid-feedback">
+                <div *ngIf="storeCountry.errors.required" >CustomerId is required</div>
+               </div> 
+            </div>
+          </div>
+ 
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="textinput" >storePinCode</label>
+            <div class="col-sm-4">
+              <input type="number" name="storePinCode" placeholder="Enter storePinCode no" class="form-control" [(ngModel)]="model.storePinCode" #storePinCode="ngModel" [ngClass]="{ 'is-invalid': f.submitted && storePinCode.invalid }" required />
+              <div *ngIf="f.submitted && storePinCode.invalid" class="invalid-feedback">
+                <div *ngIf="storePinCode.errors.required" >CustomerId is required</div>
+               </div> 
+           
+            </div>
+            
+          </div>
+
+ 
+          <!-- <div class="form-group">
+            <div class="col-sm-2 form-check">
+              <input type="checkbox" name="aggrement" class="form-check-input" [(ngModel)]="model.aggrement" #aggrement="ngModel" [ngClass]="{ 'is-invalid': f.submitted && aggrement.invalid }" required />
+            </div>
+            <label class="col-sm-10 form-check-label">I aggree to Terms & Conditions
+            </label>
+          </div>
+ 
+          <div class="form-group">
+            <div class="col-sm-12">
+              <span style="color: red;">Please Aggree with Terms & Conditions.</span>
+            </div>
+          </div> -->
+
+
+      
+
+
+
+
+
+ 
+          <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+              <div class="pull-right">
+                <button type="submit" class="btn btn-primary" style="margin: 4px;" (click)="addStore(f.value)">Save</button>
+                <button type="submit" class="btn btn-primary" style="margin: 4px;" (click)="updateStore()">Update</button>
+
+                <button type="reset" class="btn btn-default">Reset</button>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </form>
+
+    </div>
+  </div>
+  
+
+
+      <h3>Customer details</h3> 
+
+<table border="1"  cellpadding="10">
+   <tr>
+       <th>storeId</th>
+       <th>storeName</th>
+       <th>storeCountry</th>
+       <th>storePinCode</th>
+     
+      
+
+
+   </tr>
+   
+        <tr *ngFor="let store of Stores">
+
+        <td>{{store.storeId}}</td>
+        <td>{{store.storeName}}</td>
+        <td>{{store.storeCountry}}</td>
+        <td>{{store.storePinCode}}</td>
+      
+
+        <button type="submit" class="btn btn-primary" style="margin: 4px;" (click)="editStore(store)">Edit</button>
+        <button type="submit" class="btn btn-primary" style="margin: 4px;" (click)="deleteStore(store)">delete</button>
+      
+        </tr>
+
+
+</table>
+
+

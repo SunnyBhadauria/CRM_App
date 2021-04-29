@@ -1,0 +1,14 @@
+{
+  "Customers": [
+    {
+      "custID": 101,
+      "custName": "Sunny",
+      "giftVoucher": 10000,
+      "custMob": 9058374715,
+      "custCountary": "india",
+      "custcity": "AGRA",
+      "custpincode": 282010,
+      "id": 4
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+
+<div class="container">
+    <div (customerObj) = 'random($event)'>
+        <form class="form-horizontal">
+            <input type = "hidden" [(ngModel)] = "payment.id" name = "id" />
+            <div class="form-group">
+                <label class="control-label col-sm-2">payment amount </label>
+                <div class="col-sm-8">
+                    <input type = "text" [(ngModel)] = "payment.amount" name = "amount" class="form-control" disabled  />
+                </div>   
+            </div>
+            <div class="form-group">
+              <label class="control-label col-sm-2">payment modeOfPay</label>
+              <div class="col-sm-8">
+                  <input type = "text" [(ngModel)] = "payment.modeOfPay" name = "modeOfPay" class="form-control" />
+              </div>   
+          </div>
+
+
+          <div class="form-group">
+            <label class="control-label col-sm-2">payment discount </label>
+            <div class="col-sm-8">
+                <input type = "text" [(ngModel)] = "payment.discount" name = "discount" class="form-control" />
+            </div>   
+        </div>
+
+
+    
+
+
+        <div class="form-group">
+            <label class="control-label col-sm-2">bill id for payment </label>
+            <div class="col-sm-8">
+                <input type = "text" [(ngModel)] = "bill.id" name = "id" class="form-control" />
+            </div>   
+        </div>
+  
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-8">
+                <button (click) = "calculateDiscount(bill.id)" class = "btn btn-primary">Calucalte Payment amount as per discount</button>
+            </div>
+        </div>
+
+
+
+
+
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-8">
+                    <button (click) = "addpayment()" class = "btn btn-primary">Add Payment</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div>
+        <table class = "table table-striped table-bordered">
+            <tr style = "background: lightblue;">
+                <th> Payment ID</th>
+                <th>Payment amount</th>
+                <th>payment modeOfPay</th>       
+                <th> payment discount</th>
+                <th> bill id for payment</th>
+          
+            </tr>
+            <tr *ngFor = "let payment of payments">
+                <td>{{payment.id}}</td>
+                <td>{{payment.amount}}</td>
+                <td>{{payment.modeOfPay}}</td>
+                <td>{{payment.discount}}</td>
+                <td>{{payment.bill.id}}</td>
+  
+  
+                <td>
+                    <button (click) = "getpayment(payment.id)" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-edit"></span>Update</button>     
+                    &nbsp;|&nbsp;
+                    <button (click) = "deletepayment(payment.id)" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-trash"></span>Delete</button>
+                </td>
+            </tr>
+            <tr *ngIf = "payments && payments.length == 0">
+                <td colspan = "4">No records found!</td>
+            </tr>
+        </table>
+    </div>
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  

@@ -1,0 +1,270 @@
+<!-- <div class="row">
+    <div class="col-md-4 col-md-offset-4" style="margin-top: 50px; border: 1px solid rgb(100, 98, 98); padding: 30px;">
+      <form class="form-horizontal" role="form" name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+        <fieldset>
+          <legend>Customer Details:
+            <strong>Template Driven Form</strong>
+          </legend>
+ 
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="textinput">Registration Form</label>
+            <div class="col-sm-10">
+              <input type="number" name="custID" placeholder="Enter custID No" class="form-control" [(ngModel)]="model.custID" #custID="ngModel" [ngClass]="{ 'is-invalid': f.submitted && custID.invalid }" required /> -->
+               <!-- <div ng-show="form.custID.$touched && form.custID.$invalid">
+                 <small style="color: red; display: block; text-align: center;">Enter a valid id</small>
+               </div> -->
+               <!-- <div *ngIf="f.submitted && custID.invalid" class="invalid-feedback">
+                <div *ngIf="custID.errors.required" >CustomerId is required</div>
+               </div>
+           
+            </div>
+          </div>
+ 
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="textinput">CustomerModel</label>
+            <div class="col-sm-10">
+              <input type="text" name="custName" placeholder="Enter customer Name" class="form-control" [(ngModel)]="model.custName" #custName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && custName.invalid }" required />
+              <div *ngIf="f.submitted && custName.invalid" class="invalid-feedback">
+                <div *ngIf="custName.errors.required" >CustomerId is required</div>
+               </div>
+           
+           
+            </div>
+          </div>
+ 
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="textinput">giftVoucher</label>
+            <div class="col-sm-4">
+              <input type="number" name="giftVoucher" placeholder="giftVoucher" class="form-control" [(ngModel)]="model.giftVoucher" #giftVoucher="ngModel" [ngClass]="{ 'is-invalid': f.submitted && giftVoucher.invalid }" required />
+              <div *ngIf="f.submitted && giftVoucher.invalid" class="invalid-feedback">
+                <div *ngIf="giftVoucher.errors.required" >CustomerId is required</div>
+               </div> 
+           
+           
+            </div>
+ 
+            <label class="col-sm-2 control-label" for="textinput" >custMob</label>
+            <div class="col-sm-4">
+              <input type="number" name="custMob" placeholder="Enter custMobile no" class="form-control" [(ngModel)]="model.custMob" #custMob="ngModel" [ngClass]="{ 'is-invalid': f.submitted && custMob.invalid }" required />
+              <div *ngIf="f.submitted && custMob.invalid" class="invalid-feedback">
+                <div *ngIf="custMob.errors.required" >CustomerId is required</div>
+               </div> 
+           
+            </div>
+          </div> -->
+ 
+          <!-- <div class="form-group">
+            <div class="col-sm-2 form-check">
+              <input type="checkbox" name="aggrement" class="form-check-input" [(ngModel)]="model.aggrement" #aggrement="ngModel" [ngClass]="{ 'is-invalid': f.submitted && aggrement.invalid }" required />
+            </div>
+            <label class="col-sm-10 form-check-label">I aggree to Terms & Conditions
+            </label>
+          </div>
+ 
+          <div class="form-group">
+            <div class="col-sm-12">
+              <span style="color: red;">Please Aggree with Terms & Conditions.</span>
+            </div>
+          </div> -->
+
+<!-- 
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="textinput">custCountary</label>
+            <div class="col-sm-10">
+              <input type="text" name="custCountary" placeholder="Enter custCountary Name" class="form-control" [(ngModel)]="model.custCountary" #custCountary="ngModel" [ngClass]="{ 'is-invalid': f.submitted && custCountary.invalid }" required />
+              <div *ngIf="f.submitted && custCountary.invalid" class="invalid-feedback">
+                <div *ngIf="custCountary.errors.required" >CustomerId is required</div>
+               </div> 
+            
+            </div>
+          </div>
+
+
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="textinput">custcity</label>
+            <div class="col-sm-10">
+              <input type="text" name="custcity" placeholder="Enter custcity Name" class="form-control" [(ngModel)]="model.custcity" #custcity="ngModel" [ngClass]="{ 'is-invalid': f.submitted && custcity.invalid }" required />
+              <div *ngIf="f.submitted && custcity.invalid" class="invalid-feedback">
+                <div *ngIf="custcity.errors.required" >CustomerId is required</div>
+               </div> 
+           
+            </div>
+          </div>
+ 
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="textinput">custpincode</label>
+            <div class="col-sm-4">
+              <input type="number" name="custpincode" placeholder="custpincode" class="form-control" [(ngModel)]="model.custpincode" #custpincode="ngModel" [ngClass]="{ 'is-invalid': f.submitted && custpincode.invalid }" required />
+              <div *ngIf="f.submitted && custpincode.invalid" class="invalid-feedback">
+                <div *ngIf="custpincode.errors.required" >CustomerId is required</div>
+               </div> 
+            
+            </div>
+
+
+
+
+
+ 
+          <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+              <div class="pull-right">
+                <button type="submit" class="btn btn-primary" style="margin: 4px;" (click)="addCustomer(f.value)">Save</button>
+                <button type="submit" class="btn btn-primary" style="margin: 4px;" (click)="updateCustomer()">Update</button>
+
+                <button type="reset" class="btn btn-default">Reset</button>
+              </div>
+            </div>
+          </div>
+          </div>
+          
+        </fieldset>
+      </form>
+
+    </div>
+</div>
+
+
+
+      <h3>Customer details</h3> 
+
+<table border="1"  cellpadding="10">
+   <tr>
+       <th>custID</th>
+       <th>custName</th>
+       <th>giftVoucher</th>
+       <th>custMob</th>
+       <th>custCountary</th>
+       <th>custcity</th>
+       <th>custpincode</th>
+      
+
+
+   </tr>
+   
+        <tr *ngFor="let cus of Customers">
+
+        <td>{{cus.custID}}</td>
+        <td>{{cus.custName}}</td>
+        <td>{{cus.giftVoucher}}</td>
+        <td>{{cus.custMob}}</td>
+        <td>{{cus.custCountary}}</td>
+        <td>{{cus.custcity}}</td>
+        <td>{{cus.custpincode}}</td>
+
+        <button type="submit" class="btn btn-primary" style="margin: 4px;" (click)="editCustomer(cus)">Edit</button>
+        <button type="submit" class="btn btn-primary" style="margin: 4px;" (click)="deleteCustomer(cus)">delete</button>
+      
+        </tr>
+
+
+</table> -->
+ 
+<div class="container">
+  <div (customerObj) = 'random($event)'>
+      <form class="form-horizontal" >
+          <input type = "hidden" [(ngModel)] = "customer.id" name = "id" />
+          <div class="form-group">
+              <label class="control-label col-sm-2">customer Name</label>
+              <div class="col-sm-8">
+                  <input type = "text" [(ngModel)] = "customer.custName" name = "custName" class="form-control" />
+              </div>   
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-2">Gift Voucher</label>
+            <div class="col-sm-8">
+                <input type = "text" [(ngModel)] = "customer.giftVoucher" name = "giftVoucher" class="form-control" />
+            </div>   
+        </div>
+
+        <div class="form-group">
+          <label class="control-label col-sm-2">customer Mobile</label>
+          <div class="col-sm-8">
+              <input type = "text" [(ngModel)] = "customer.custMob" name = "custMob" class="form-control" />
+          </div>   
+      </div>
+
+      <div class="form-group">
+        <label class="control-label col-sm-2">customer Country</label>
+        <div class="col-sm-8">
+            <input type = "text" [(ngModel)] = "customer.custCountary" name = "custCountary" class="form-control" />
+        </div>   
+    </div>
+
+
+    <div class="form-group">
+      <label class="control-label col-sm-2">customer City</label>
+      <div class="col-sm-8">
+          <input type = "text" [(ngModel)] = "customer.custcity" name = "custcity" class="form-control" />
+      </div>   
+  </div>
+
+
+  <div class="form-group">
+    <label class="control-label col-sm-2">customer Pin Code</label>
+    <div class="col-sm-8">
+        <input type = "text" [(ngModel)] = "customer.custpincode" name = "custpincode" class="form-control" />
+    </div>   
+</div>
+
+
+
+          <div class="form-group">
+              <div class="col-sm-offset-2 col-sm-8">
+                  <button (click) = "addcustomer()" class = "btn btn-primary">Add customer</button>
+              </div>
+          </div>
+      </form>
+  </div>
+  <div>
+      <table class = "table table-striped table-bordered">
+          <tr style = "background: lightblue;">
+              <th>ID</th>
+              <th>Name</th>
+              <th>Gift Voucher</th>
+              <th>Mobile</th>
+              <th>Countary</th>
+              <th>City</th>
+              <th>PinCode</th>
+              
+
+          </tr>
+          <tr *ngFor = "let customer of customers">
+              <td>{{customer.id}}</td>
+              <td>{{customer.custName}}</td>
+              <td>{{customer.giftVoucher}}</td>
+              <td>{{customer.custMob}}</td>
+              <td>{{customer.custCountary}}</td>
+              <td>{{customer.custcity}}</td>
+              <td>{{customer.custpincode}}</td>
+             
+
+
+              <td>
+                  <button (click) = "getcustomer(customer.id)" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-edit"></span>Update</button>     
+                  &nbsp;|&nbsp;
+                  <button (click) = "deletecustomer(customer.id)" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-trash"></span>Delete</button>
+              </td>
+          </tr>
+          <tr *ngIf = "customers && customers.length == 0">
+              <td colspan = "4">No records found!</td>
+          </tr>
+      </table>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
