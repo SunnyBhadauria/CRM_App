@@ -1,12 +1,19 @@
+import { employee } from "../employee/employee";
+
 export class store{
 
-id: Number;
+  id: Number;
 
-storeName: string;
+ storeName: string;
 
  storeCountry: string;
 
+ storeCity: string;
+
  storePinCode: number;
+
+
+
  constructor()
  {
 

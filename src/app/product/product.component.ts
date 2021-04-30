@@ -88,7 +88,7 @@ this._productservice.getproductById(productId)
 
 navigate()
 {
-  this._router.navigate(['/addBill']);
+  this._router.navigate(['/addCard']);
 }
 
 

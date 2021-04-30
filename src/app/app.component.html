@@ -1,163 +1,22 @@
-<!-- 
-
-<div class="scrollmenu">
-    <a routerLink="addCustomer" class="nav-link" routerLinkActive="active">Customer</a>>
-   
- 
-    <a routerLink="customers" class="nav-link" routerLinkActive="active">List of Customers</a>
-   
-    
-
-    <a routerLink="addStore" class="nav-link" routerLinkActive="active">Store</a>
-   
-   
- 
-    <a routerLink="addEmployee" class="nav-link" routerLinkActive="active"> Employee</a>
-  
-   
-  
-    <a routerLink="addProduct" class="nav-link" routerLinkActive="active"> Product</a>
-    
-    
-  
-    <a routerLink="addCard" class="nav-link" routerLinkActive="active"> Card</a>
-  
-   
-  
-    <a routerLink="addPayment" class="nav-link" routerLinkActive="active"> Payment</a>
-   
-   
-
-    <a routerLink="addBill" class="nav-link" routerLinkActive="active"> Bill</a>
-   
 
 
-    <a routerLink="addCumulativePoint" class="nav-link" routerLinkActive="active"> Cumulative Point</a>
-  
-   
-  </div>
-
-
-  <div class="navbar" >
-    <div class="topnav-right">
-    <a href="#home">Home</a>
-    <a href="#about">News</a>
-    <div class="dropdown">
-      <button class="dropbtn">display List
-        <i class="fa fa-caret-down"></i>
-      </button>
-      <div class="dropdown-content">
-        <a routerLink="displayCustomer" class="nav-link" routerLinkActive="active"> displayCustomer</a>
-        
-        <a routerLink="displayProduct" class="nav-link" routerLinkActive="active"> displayProduct</a>
-
-        <a routerLink="displayBill" class="nav-link" routerLinkActive="active"> displayBill</a>
-
-        <a routerLink="displayPayment" class="nav-link" routerLinkActive="active"> displayPayment</a>
-
-        <a routerLink="displayCumulativePoint" class="nav-link" routerLinkActive="active"> displayCumulativePoint</a>
-
-        <a routerLink="displayStore" class="nav-link" routerLinkActive="active"> displayStore</a>
-
-        <a routerLink="displayEmployee" class="nav-link" routerLinkActive="active"> displayEmployee</a>
-
-        <a routerLink="displayCard" class="nav-link" routerLinkActive="active"> displayCard</a>
-
-
+      <div class="topnav" id="myTopnav">
+        <a routerLink="addHome" class="nav-link" routerLinkActive="active">Home</a>
+        <a routerLink="addStore" class="nav-link" routerLinkActive="active">Store</a>
+        <a routerLink="addEmployee" class="nav-link" routerLinkActive="active"> Employee</a>
+        <a routerLink="addCustomer" class="nav-link" routerLinkActive="active">Customer</a>
+        <a routerLink="addProduct" class="nav-link" routerLinkActive="active"> Product</a>
+        <a routerLink="addCard" class="nav-link" routerLinkActive="active"> Card</a>
+        <a routerLink="addBill" class="nav-link" routerLinkActive="active"> Bill</a>
+        <a routerLink="addPayment" class="nav-link" routerLinkActive="active"> Payment</a>
+        <a routerLink="addCumulativePoint" class="nav-link" routerLinkActive="active"> Cumulative Point</a>
       </div>
-    </div>
-    </div>
-  </div> -->
-
-
-
-
-
-
-  <div class="topnav" id="myTopnav">
-    <a href="#home" class="active">Home</a>
-    <a routerLink="addCustomer" class="nav-link" routerLinkActive="active">Customer</a>>
-   
- 
-    <a routerLink="addProduct" class="nav-link" routerLinkActive="active"> Product</a>
-    
-   
-    <a routerLink="addBill" class="nav-link" routerLinkActive="active"> Bill</a>
-    <a routerLink="addPayment" class="nav-link" routerLinkActive="active"> Payment</a>
-    <a routerLink="addCumulativePoint" class="nav-link" routerLinkActive="active"> Cumulative Point</a>
-    <a routerLink="addCard" class="nav-link" routerLinkActive="active"> Card</a>
-    
-
-    <a routerLink="addStore" class="nav-link" routerLinkActive="active">Store</a>
-   
-   
- 
-    <a routerLink="addEmployee" class="nav-link" routerLinkActive="active"> Employee</a>
   
+        <div class="align">
+        <app-date></app-date>
+       </div>
    
-  
-    
-
-    <div ngbDropdown class="d-inline-block">
-      <button ngbDropdownToggle class="btn btn-outline-primary" id="dropdownBasic1" data-toggle="dropdown" >Toggle dropdown</button>
-      <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-        <button ngbDropdownItem>Action - 1</button>
-        <button ngbDropdownItem>Another Action</button>
-        <button ngbDropdownItem>Something else is here</button>
-      </div>
-    </div>
-  
-   
-  
-</div>
-   
-<div class="row">
-  <div class="col">
-    <div ngbDropdown class="d-inline-block">
-      <button ngbDropdownToggle class="btn btn-outline-primary" id="dropdownBasic1" >Toggle dropdown</button>
-      <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-        <button ngbDropdownItem>Action - 1</button>
-        <button ngbDropdownItem>Another Action</button>
-        <button ngbDropdownItem>Something else is here</button>
-      </div>
-    </div>
-  </div>
-   
-<!-- 
-
-    <div class="dropdown">
-      <button class="dropbtn">DisplayList
-        <i class="fa fa-caret-down"></i>
-      </button>
-      <a href="#about">About</a>
-      <div class="dropdown-content">
-        <a routerLink="displayCustomer" class="nav-link" routerLinkActive="active"> displayCustomer</a>
-        
-        <a routerLink="displayProduct" class="nav-link" routerLinkActive="active"> displayProduct</a>
-
-        <a routerLink="displayBill" class="nav-link" routerLinkActive="active"> displayBill</a>
-
-        <a routerLink="displayPayment" class="nav-link" routerLinkActive="active"> displayPayment</a>
-
-        <a routerLink="displayCumulativePoint" class="nav-link" routerLinkActive="active"> displayCumulativePoint</a>
-
-        <a routerLink="displayStore" class="nav-link" routerLinkActive="active"> displayStore</a>
-
-        <a routerLink="displayEmployee" class="nav-link" routerLinkActive="active"> displayEmployee</a>
-
-        <a routerLink="displayCard" class="nav-link" routerLinkActive="active"> displayCard</a>
-      </div>
-    </div> -->
-    <!-- <a href="#about">About</a>
-  <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a> -->
- 
 
 
-  <div class="vertical-menu">
-    <a href="#" class="active">Home</a>
-    <a href="#">Link 1</a>
-    <a href="#">Link 2</a>
-    <a href="#">Link 3</a>
-    <a href="#">Link 4</a>
-  </div>
-    <router-outlet></router-outlet>
+      <router-outlet></router-outlet>
+

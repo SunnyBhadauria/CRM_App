@@ -21,6 +21,21 @@ getAllcumulativepoints(): Observable<cumulativepoint[]>
  .catch(this.handleError);
 }
 
+
+calculatecumulativepointById(customerId: string): Observable<cumulativepoint>
+{
+ return this._httpService.get("http://localhost:9191/spring-mvc-restfull-crud-example/calculateCumulativeTotal/"+ customerId)
+ .map((response: Response) => response.json())
+ .catch(this.handleError);
+}
+
+
+
+
+
+
+
+
 getcumulativepointById(cumulativepointId: string): Observable<cumulativepoint>
 {
  return this._httpService.get("http://localhost:9191/spring-mvc-restfull-crud-example/cumulativePoint/"+ cumulativepointId)

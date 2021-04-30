@@ -24,7 +24,10 @@ import { StoreListComponent } from './store-list/store-list.component';
 import { EmployeeListComponent } from './employee-list/employee-list.component';
 import { FilterPipe } from './filter.pipe';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NgbDropdown, NgbDropdownConfig, NgbDropdownItem, NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbDatepicker, NgbDropdownMenu, NgbDropdownModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { DateComponent } from './date/date.component';
+import { PrintComponent } from './print/print.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +49,9 @@ import { NgbDropdown, NgbDropdownConfig, NgbDropdownItem, NgbModule } from '@ng-
     StoreListComponent,
     EmployeeListComponent,
     FilterPipe,
+    DateComponent,
+    PrintComponent,
+    HomeComponent
     
    
   ],
@@ -57,11 +63,9 @@ import { NgbDropdown, NgbDropdownConfig, NgbDropdownItem, NgbModule } from '@ng-
     ReactiveFormsModule,
     HttpModule,
     BrowserAnimationsModule,
-    NgbModule,
-    
-    
-  
-    
+    NgbModule
+   
+   
   ],
   providers: [],
   bootstrap: [AppComponent]

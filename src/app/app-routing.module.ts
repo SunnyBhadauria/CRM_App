@@ -10,6 +10,7 @@ import { CustomerListComponent } from './customer-list/customer-list.component';
 import { CustomerComponent } from './customer/customer.component';
 import { EmployeeListComponent } from './employee-list/employee-list.component';
 import { EmployeeComponent } from './employee/employee.component';
+import { HomeComponent } from './home/home.component';
 import { PaymentListComponent } from './payment-list/payment-list.component';
 import { PaymentComponent } from './payment/payment.component';
 import { ProductListComponent } from './product-list/product-list.component';
@@ -25,6 +26,9 @@ const routes: Routes = [
 
  {
     path: 'addStore' , component: StoreComponent
+  },
+  {
+    path: 'addHome' , component: HomeComponent
   },
   {
     path: 'addProduct' , component: ProductComponent

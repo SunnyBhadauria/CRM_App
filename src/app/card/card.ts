@@ -4,14 +4,9 @@ import { customer } from "../customer/customer";
 export class card{
     id: number;
   
-    cardValidity:string;
-
-    
-    silverCardCumulativeTotal:number;
-  
-    goldCardCumulativeTotal:number;
-	
-	 cumulativePoint:cumulativepoint;
+    cardType:String;
+   
+	 //cumulativePoint:cumulativepoint;
    
    customer: customer;
 

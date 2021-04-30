@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { CardService } from '../card.service';
+import { CumulativePointService } from '../cumulative-point.service';
 import { cumulativepoint } from '../cumulative-point/cumulativepoint';
 import { customer } from '../customer/customer';
 import { card } from './card';
@@ -20,16 +21,20 @@ export class CardComponent implements OnInit {
   card = new card();
   
   customer = new customer();
- 
-  cumulativePoint = new cumulativepoint();
 
-  constructor(private _cardservice: CardService , private _router: Router) { }
+  sum: number;
+
+  cumulativepoints: cumulativepoint[];
+ 
+ // cumulativePoint = new cumulativepoint();
+
+  constructor(private _cardservice: CardService ,private _cumulativepointservice: CumulativePointService , private _router: Router) { }
 
   ngOnInit(): void {
    
-    this.card.cumulativePoint=this.cumulativePoint;
+    //this.card.cumulativePoint=this.cumulativePoint;
     this.card.customer=this.customer;
-   
+   this.card.cardType='silver';
     this.getcards();
   }
 
@@ -55,6 +60,8 @@ export class CardComponent implements OnInit {
           this.statusMessage = 'Problem With service. Please try again later! ';
                 }
         );
+
+        this.navigate();
   }
 
 private  reset()
@@ -95,6 +102,41 @@ this._cardservice.getcardById(cardId)
 
 
 }
+
+
+
+// updatecard(customerId: string)
+// {
+
+//   this._cumulativePointservice.calculatecumulativepointById(customerId)
+//   .subscribe((sumData) => {this.cumulative= sumData; }),
+// (error) => {
+//   console.log(error);
+//   this.statusMessage = 'Problem With service. Please try again later! ';
+//     };
+
+
+// }
+
+updatecard()
+{
+  this._cumulativepointservice.getAllcumulativepoints()
+  .subscribe((cumulativepointData) => this.cumulativepoints = cumulativepointData,
+  (error) => {
+      console.log(error);
+      this.statusMessage = 'Problem With service. Please try again later! ';
+  }
+  );
+ 
+
+}
+
+navigate()
+{
+  this._router.navigate(['/addBill']);
+}
+
+
 
 
 }

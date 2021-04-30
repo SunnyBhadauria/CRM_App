@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { EmployeeService } from '../employee.service';
+import { store } from '../store/store';
 import { employee } from './employee';
 
 @Component({
@@ -14,10 +15,13 @@ export class EmployeeComponent implements OnInit {
   employees: employee[];
   statusMessage: string;
   employee = new employee();
+  store = new store();
 
-  constructor(private _employeeservice: EmployeeService , private _router: Router) { }
+  constructor(private _employeeservice:  EmployeeService, private _router: Router) { }
 
   ngOnInit(): void {
+   
+   this.employee.store=this.store;
     this.getemployees();
   }
 
@@ -43,13 +47,19 @@ export class EmployeeComponent implements OnInit {
           this.statusMessage = 'Problem With service. Please try again later! ';
                 }
         );
+        this.navigate();
   }
 
 private  reset()
 {
 this.employee.id = null;
-//this.employee.title= null;
-//this.employee.author = null;
+this.employee.employeeName = null;
+this.employee.employeeCity = null;
+this.employee.employeeDob = null;
+this.employee.employeeMob = null;
+this.employee.employeeeCountry = null;
+this.employee.employeePincode = null;
+
 
 
 }
@@ -83,6 +93,9 @@ this._employeeservice.getemployeeById(employeeId)
 
 
 }
-
+navigate()
+{
+  this._router.navigate(['/addCustomer']);
+}
 
 }

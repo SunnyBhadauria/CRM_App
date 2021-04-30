@@ -42,7 +42,7 @@ let options = new RequestOptions( { headers: headers});
    return this._httpService.put("http://localhost:9191/spring-mvc-restfull-crud-example/employee/" + employee.id ,body,options);
  }
  else{
-   return this._httpService.post("http://localhost:9191/spring-mvc-restfull-crud-example/employee" ,body,options);
+   return this._httpService.post("http://localhost:9191/spring-mvc-restfull-crud-example/employee/" ,body,options);
  
  }
 

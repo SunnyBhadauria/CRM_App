@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { employee } from '../employee/employee';
 import { StoreService } from '../store.service';
 import { store } from './store';
 
@@ -43,13 +44,18 @@ export class StoreComponent implements OnInit {
           this.statusMessage = 'Problem With service. Please try again later! ';
                 }
         );
+
+        this.navigate();
   }
 
 private  reset()
 {
 this.store.id = null;
-//this.store.title= null;
-//this.store.author = null;
+this.store.storeCity = null;
+this.store.storeName = null;
+this.store.storeCountry = null;
+this.store.storePinCode = null;
+
 
 
 }
@@ -84,4 +90,8 @@ this._storeservice.getstoreById(storeId)
 
 }
 
+navigate()
+{
+  this._router.navigate(['/addEmployee']);
+}
 }

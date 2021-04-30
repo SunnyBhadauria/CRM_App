@@ -121,3 +121,11 @@ body {
   background-size: 100% 100%;
 }
 
+.align
+{
+position: relative;
+float: right;
+margin-top: -50px;
+
+
+}
